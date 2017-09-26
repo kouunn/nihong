@@ -1,0 +1,16 @@
+<%= form_for(@report) do |f| %>
+
+  <div class="field">
+    <%= f.text_field :title,:placeholder=>'报告标题' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :course,:placeholder=>'课程名字' %>
+  </div>
+  <div class="report">
+    <%= f.text_area :content,:placeholder=>'开始写。。。。。。。' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "发布" %>
+  </div>
+  
+<% end %>

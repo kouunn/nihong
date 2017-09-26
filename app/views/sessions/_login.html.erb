@@ -1,0 +1,35 @@
+ 		<div class="field">	
+    		<%= f.text_field :email ,:placeholder=>'邮箱'%>
+  		</div>
+  		<div class="field">
+    		<%= f.password_field :password, :placeholder=>'密码',:value => 'xxxxxx',:onFocus=>"if(value=='xxxxxx'){value='';}" %>
+  		</div>
+  		<div class="field">
+    		<%= f.submit :登陆%>
+  		</div>
+  		<!--
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            记住我
+          </label>
+        </p>
+ 	
+  		<p class="submit"><input type="submit" name="commit" value="登陆"></p>
+		-->
+  
+  
+  		</br>
+  		<div class="login-help">
+     	   <p>还没有帐号? <a href="<%=signup_path%>">快速注册</a></p>
+    	</div>
+    	<div class="login-help">
+     	   <p> <a href="<%=signup_path%>">新浪帐号登陆</a></p>
+    	</div>
+    	<div class="login-help">
+     	   <p> <a href="<%=signup_path%>">腾讯帐号登陆</a></p>
+    	</div>
+    	<div class="login-help">
+     	   <p> <a href="<%=signup_path%>">人人帐号登陆</a></p>
+    	</div>
+

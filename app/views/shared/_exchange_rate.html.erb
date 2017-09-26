@@ -1,0 +1,95 @@
+<table class="exchange" width="100" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#B9B5B6">
+<div id="crncycalc">
+<form name="currcalc" onSubmit="calculate(); return false;">
+<input type=HIDDEN name="flag" value=0>
+<input type=HIDDEN name="result" value=1>
+<input type=HIDDEN name="d_list" value=1>
+<input type=HIDDEN name="version" value="us">
+<input type=HIDDEN name="exp2" value="us1">
+<input type=HIDDEN name="displayres" value=" GBP">
+<input type=HIDDEN name="disptkc" value="British Pound">
+<input type=HIDDEN name=T value="markets_curr99.ht">
+<input type=HIDDEN name=TZ>
+<input type=HIDDEN name="translation" value="">
+<input type=HIDDEN name="translation1" value="您的选择出现了一点问题，请重新选择两种货币再试。">
+<input type=HIDDEN name="translation2" value="请输入一个合法的货币数量。">
+<input type=HIDDEN name="translation3" value="该转换工具只能在 Netscape Navigator 或者 Microsoft Internet Explorer 4.0 以上版本中使用。">
+<tr bgcolor="#FEF5EC">
+<td style="padding-top:5px;padding-bottom:5px;padding-left:10px">
+<table width="100" cellspacing="0" cellpadding="3" border="0" align="center">
+<tr>
+<td nowrap>
+<div align="center">交易货币兑换数量：<br />
+<input type="textbox" name="amount" value="100.00" size="15" style="width:115px">
+</div>
+</td>
+</tr>
+<tr>
+<td nowrap align="center">
+<select name="from_tkc" size="1" style="width:115px">
+<option value="">选择货币
+<option value="USD:CUR">美元(USD)
+<option value="CNY:CUR">人民币(CNY)
+<option value="HKD:CUR">港币(HKD)
+<option value="TWD:CUR">台币(TWD)
+<option value="">--------------------
+<option value="GBP:CUR">英镑(GBP)
+<option value="CAD:CUR">加元(CAD)
+<option value="EUR:CUR">欧元(EUR)
+<option value="AUD:CUR">澳元(AUD)
+<option value="BEF:CUR">比利时法郎(BEF)
+<option value="DKK:CUR">丹麦克朗(DKK)
+<option value="NLG:CUR">荷兰盾(NLG)
+<option value="FRF:CUR">法国法郎(FRF)
+<option value="DEM:CUR">德国马克(DEM)
+<option value="ITL:CUR">意大利里拉(ITL)
+<option value="JPY:CUR"selected>日元(JPY)
+<option value="CHF:CUR">瑞士法郎(CHF)
+<option value="SGD:CUR">新加坡元(SGD)
+</select>
+</td>
+</tr>
+<tr>
+<td nowrap align="center">
+<select name="to_tkc" size="1" style="width:115px">
+<option value="">选择货币
+<option value="USD:CUR">美元(USD)
+<option value="CNY:CUR" selected>人民币(CNY)
+<option value="HKD:CUR">港币(HKD)
+<option value="TWD:CUR">台币(TWD)
+<option value="">--------------------
+<option value="GBP:CUR">英镑(GBP)
+<option value="CAD:CUR">加元(CAD)
+<option value="EUR:CUR">欧元(EUR)
+<option value="AUD:CUR">澳元(AUD)
+<option value="BEF:CUR">比利时法郎(BEF)
+<option value="DKK:CUR">丹麦克朗(DKK)
+<option value="NLG:CUR">荷兰盾(NLG)
+<option value="FRF:CUR">法国法郎(FRF)
+<option value="DEM:CUR">德国马克(DEM)
+<option value="ITL:CUR">意大利里拉(ITL)
+<option value="JPY:CUR">日元(JPY)
+<option value="CHF:CUR">瑞士法郎(CHF)
+<option value="SGD:CUR">新加坡元(SGD)
+</select>
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type="button" name="cal" value="开始兑换" onClick="calculate()">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr bgcolor="#FEF5EC">
+<td align="center">
+<script src="http://www.bloomberg.com/jscommon/calculators/finance.js" language="javascript"></script>
+<script src="http://www.bloomberg.com/jscommon/calculators/mktscurrcalc.js" language="javascript"></script>
+<script src="http://www.bloomberg.com/jscommon/calculators/currdata.js" language="javascript"></script>
+<script language="Javascript">loadResults();</script>
+汇率数据仅供参考。</td>
+</tr>
+</form>
+</div>
+</table>

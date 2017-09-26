@@ -1,0 +1,5 @@
+<%= form_for (current_user.relationships.build(:followed_id => @user.id)) do |f|%>
+	 </br>  
+	<div><%= f.hidden_field :followed_id %></div>
+   	<div class="actions"><%= f.submit "关注"%></div>
+<% end %>

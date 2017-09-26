@@ -1,0 +1,21 @@
+<% if signed_in?%>
+
+   <table class="front" summary="For signed-in users">
+     <tr>
+       <td class="main">
+			<!--<h1 class="micropost">新鲜事</h1>-->
+			<%= render 'tab'%>
+	 	
+       </td>
+       <td class="sidebar round">
+       		<%=render 'shared/user_info' %>
+       		<%=render 'shared/stats' %>
+       </td>
+     </tr>
+   </table>
+
+<% else %>
+
+ 
+
+<% end %>

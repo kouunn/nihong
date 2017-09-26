@@ -1,0 +1,9 @@
+<li>
+  <%= image_tag user.photo.url(:small) %>
+  <%= link_to user.name, user  %>
+  <% if current_user.admin?  %>
+|
+  <%= link_to "删除",user, :method => :delete, :confirm => "确定要删除么？",
+                           :title => "删除 #{user.name}" %>
+  <% end %>
+</li>

@@ -1,0 +1,15 @@
+<%= form_for(@help) do |f| %>
+
+  <div class="field">
+    <%= f.text_area :content,:placeholder=>'帮帮我吧！' %>
+  </div>
+   <div class="field">
+    <%= f.text_field :reward,:placeholder=>'回赠：请吃饭' %>
+  </div>
+     <div class="field">
+    <%= f.text_field :reward,:placeholder=>'剩余时间：1小时' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "发布" %>
+  </div>
+<% end %>

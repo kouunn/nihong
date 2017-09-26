@@ -1,0 +1,92 @@
+<script type="text/javascript">
+window.onload = function(){
+     var arr = document.getElementsByTagName('button');
+	 for(var i = 0;i<arr.length;i++){
+			arr[i].onclick = function(){
+					//alert(this.id);
+					  var i=this.id;
+					  i="#"+i
+                 $(i).slideToggle(1000);
+                  //var val = document.getElementById("comment_commentable_id").value;
+                   //alert("这里是你要的值：" + val);
+			}
+	 }
+}
+
+</script>
+ 
+<style type="text/css"> 
+
+div.panel
+{
+margin:0px;
+padding:0px;
+
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+
+
+</style>
+
+
+	
+
+<table class="microposts" >
+	
+
+<tr>
+	<td class="gravatar">
+		<%= link_to image_tag(feed_item.user.photo.url(:small)), feed_item.user %>
+	</td>	
+
+	<td class="micropost">
+		<span class="user">
+			<%= link_to feed_item.user.name,feed_item.user %>
+		</span>
+		<span class="content">
+			<%= feed_item.content %>
+		</span>		
+		<span class="timestamp">
+			<%= time_ago_in_words(feed_item.created_at)%> ago
+		</span>		
+		<span>		
+		    <div class="panel"id= "<%= feed_item.id %>" style="display:none">
+		      		<%= link_to image_tag(feed_item.user.photo.url(:small)), feed_item.user %>
+			  
+              <%= form_for(@comment) do |f| %>
+			      <div class="field">
+   						<%= f.text_field :comment %>
+   						<input id="comment_commentable_id" name="comment[commentable_id]"  type="hidden" value="<%= feed_item.id %>"/>
+					    <%# f.hidden_field :commentable_id %><!--传递？-->
+					    <%= f.hidden_field :commentable_type %>
+					  
+					    <%= f.submit :发送%>
+ 				 </div>
+ 				 
+			    <%end%>
+			    
+			    <%=  current_user.comments %>
+    					<%# render 'comments/comment' %>
+			
+			    
+		    </div>
+    	</span>		
+	</td>
+	  
+ <td>
+
+       <button id="<%= feed_item.id %>" onclick="slideToggle()">留言</button>
+      
+  </td>   
+	  <% if current_user?(feed_item.user)%>
+  		
+	  
+	    <td>
+  			<%= link_to "删除", feed_item,:method => :delete,
+  									  :confirm=> "确定要删除吗？",
+  									  :title=> feed_item.content %>
+  		</td>
+  		
+  	<%end%>
+</tr>

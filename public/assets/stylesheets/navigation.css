@@ -1,0 +1,64 @@
+
+/* =Menu
+--------------------------------------------------------------------------------------------------------*/
+
+#menu { 
+	 
+	 position: fixed;
+	 z-index:99;
+	 top:0;
+         left:0px;
+	 right:0px;
+	 margin-right:auto;
+	 margin-left:auto;
+	 overflow: hidden; 
+	 background:#787878;
+	 width:1000px;
+	 height:44px;
+
+
+ }
+#menu div{
+ 	
+ position:fixed
+
+	left:0px;
+    z-index:999;
+
+ }
+#menu .colourful { 
+	display: block; 
+	position: absolute; 
+	background: #f0ad22; 
+	height: 38px; 
+	width: 85px; 
+	top: 4px; 
+	left: -100px; 
+}
+#menu ul { 
+	margin: 0;
+	padding: 0; 
+	list-style: none; 
+	float: left; 
+	position: relative; 
+	top: 0; 
+	left: 0px; 
+	z-index: 1; 
+}
+#menu li { 
+	float: left;
+	margin: 0 1px 0 0; 
+}
+
+#menu a:link, #menu a:visited, #menu a:hover, #menu a:active { 
+	color: #000; 
+	text-align: center; 
+	display: block;
+	 border: solid; 
+
+	 border-width: 4px 0 0; 
+	 line-height: 40px;
+	  width: 85px; 
+	  
+  }
+#menu li a:hover { text-decoration: none; color: #fff; text-shadow: 0 0 1px #999; }

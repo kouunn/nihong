@@ -1,0 +1,119 @@
+﻿
+	<!-- start wrapper -->
+    <div id="wrapper">
+
+	
+         <!-- start menu -->
+     	 <div id="menu">
+          <li><%=  image_tag('images/logo.png') %></li>
+        	<ul>
+    			<li><%= link_to "首页",home_path %></li>
+				<li><%= link_to "朋友",users_path %></li>
+				<li><%= link_to "门派",groups_path %></li>
+      			<li><%= link_to "活动",activities_path %></li>
+				<li><%= link_to "资源下载",activities_path %></li>
+	        </ul>
+
+  
+     	 </div>
+
+
+
+      <!-- end menu --> 
+    </div>
+<!-- end wrapper --> 
+
+
+	  <div class="menu-right">   
+		 
+		   	
+	       <% if signed_in? %>
+	       <p> 
+		  <% if is_admin  %>
+		
+		      	<a href="<%= user_path(current_user)  %>" class="icon icon-wrench">  	
+					<span>
+						<em>&nbsp;管理</em>
+					</span>
+				</a>
+		    
+		  <%end%>  
+
+		  
+	    	  	<a href="<%= user_path(current_user)  %>" class="icon icon-home">
+	 	  	
+					<span>
+						<em>&nbsp;个人主页</em>
+					</span>
+				</a>
+     		  	<a href="<%= user_path(current_user)  %>" class="icon icon-mail">
+		  	
+					<span>
+						<em>&nbsp;消息</em>
+					</span>
+				</a>
+				</a>
+				
+					<a href="<%=course_user_path(current_user)%>" class="icon icon-book-alt2">
+					<span>
+						<em>&nbsp;我的课程</em>
+					</span>
+				</a>					
+					<a href="<%=footprint_user_path(current_user)%>" class="icon icon-pin">
+					<span>
+						<em>&nbsp;我的足迹</em>
+					</span>
+				</a>
+				</a>
+				
+					<a href="<%=food_user_path(current_user)%>" class="icon icon-heart-stroke">
+					<span>
+						<em>&nbsp;我的美食</em>
+					</span>
+				</a>		  
+		  		<a href="<%= edit_user_path(current_user) %>" class="icon icon-cog">
+					<span>
+						<em>&nbsp;设置</em>
+					</span>
+				</a>
+				
+						<a href="<%= signout_path%>" class="icon icon-x-altx-alt">
+					<span>
+						<em>&nbsp;退出</em>
+					</span>
+				</a>
+			
+			
+		</p>
+	       <% else %>
+	       <p>
+	
+       	<a href="<%= login_path%>" class="icon icon-user">
+					<span>
+						<em>&nbsp;登陆</em>
+					</span>
+				</a>
+				
+					<a href="<%= signup_path%>" class="icon icon-paperclip">
+					<span>
+						<em>&nbsp;注册</em>
+					</span>
+				</a>
+		 
+		 
+	       </p>
+	       <%end%>
+	    </div>	
+
+
+
+
+  <!-- 导航代码结束 -->
+
+  <!-- 侧边栏代码 开始 -->
+
+  <p id="back-to-top"><a href="#top"><span></span>回到顶部</a></p>
+    <!-- 代码 结束 -->
+    
+        <!-- 汇率 代码 -->
+<%=render 'shared/exchange_rate'%>    

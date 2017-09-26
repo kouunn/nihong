@@ -1,0 +1,85 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+  <h1><%= @user.name%>课程</h1>
+            <div class="profile_nav">
+
+    	  <%= link_to '新鲜事',user_path %> 
+    	  <%= link_to '报告',report_user_path(@user)%> 
+          <%= link_to '课程',course_user_path(@user)%> 
+          <%= link_to '足迹',footprint_user_path(@user)%> 
+          <%= link_to '美食',food_user_path(@user)%> 
+ 	  </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<table id="course">
+<tr>
+<th>课程表</th>
+<th>月</th>
+<th>火</th>
+<th>水</th>
+<th>木</th>
+<th>金</th>
+</tr>
+
+<tr>
+<td>一限</td>
+<td>Steven Jobs</br> <%= link_to "谁还选了"%>  <%= link_to "帮签到"%>  <%= link_to " 带资料"%><%= link_to " 前辈报告"%></td>
+<td>USA</td>
+<td>Apple</td>
+<td>Steven Jobs</td>
+<td>USA</td>
+</tr>
+
+<tr class="alt">
+<td>二限</td>
+<td>Li YanHong</td>
+<td>China</td>
+<td>Baidu</td>
+<td>Li YanHong</td>
+<td>China</td>
+</tr>
+
+<tr>
+<td>三限</td>
+<td>Larry Page</td>
+<td>USA</td>
+<td>Google</td>
+<td>Larry Page</td>
+<td>USA</td>
+</tr>
+
+<tr class="alt">
+<td>四限</td>
+<td>Liu Chuanzhi</td>
+<td>China</td>
+<td>Lenovo</td>
+<td>Liu Chuanzhi</td>
+<td>China</td>
+</tr>
+
+
+
+</table>
+      
+      
+	<%= render 'follow_form' if signed_in? %>
+    
+
+    </td>
+    <td class="sidebar round">
+      <strong>名号</strong> <%= @user.name %><br />
+      <strong>URL</strong> <%= link_to user_path(@user), user_path(@user) %><br />
+      <strong>日记</strong> <%= @user.microposts.count %>
+     <%=render 'shared/stats' %>
+     <%=render 'shared/user_profile' %>
+    </td>  
+  </tr>  
+</table>

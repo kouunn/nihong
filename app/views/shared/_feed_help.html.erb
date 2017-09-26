@@ -1,0 +1,5 @@
+<% if @feed_helps.any? %>
+ 	<table class="micropost" summary="Status feed">
+ 		<%= render :partial => 'shared/feed_item', :collection => @feed_helps %>
+	</table>	
+ <% end %>

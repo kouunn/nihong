@@ -1,0 +1,21 @@
+<table class="microposts" >
+<tr>
+  <td class="micropost">
+
+    <span class="content"><h3> <%= link_to report.title,report %></h3></span>
+
+    <span class="timestamp"> 
+      <%= report.created_at %>
+    </span>
+  </td>
+  <% if current_user?(report.user)%>
+  	<td>
+  		<%= link_to "删除", report,:method => :delete,
+  									  :confirm=> "确定要删除吗？",
+  									  :title=> report.content %>
+  	</td>
+  <%end%>
+</tr>
+</table>
+
+

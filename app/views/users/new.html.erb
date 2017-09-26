@@ -1,0 +1,10 @@
+<div class="login">
+<h1>注册</h1>
+
+<%= form_for(@user) do |f| %>  
+<%= render 'register' , :f => f %>
+  <div class="actions">
+    <%= f.submit "注册" %>
+  </div>
+<% end %>
+</div>

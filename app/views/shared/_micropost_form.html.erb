@@ -1,0 +1,9 @@
+<%= form_for(@micropost) do |f| %>
+
+  <div class="field">
+    <%= f.text_area :content,:placeholder=>'少年随便写点啥呗！' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "发布" %>
+  </div>
+<% end %>

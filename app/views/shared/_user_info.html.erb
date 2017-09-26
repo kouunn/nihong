@@ -1,0 +1,13 @@
+
+<div id="user_info">
+  <a href="<%= user_path(current_user)%>">
+  		<%= image_tag current_user.photo.url (:original) %>   </br>
+ 	<span class="user_info">
+  		<%= current_user.name %>
+ 
+	</span>
+	<span class="microposts">
+  		  <%= pluralize(current_user.microposts.count,"") %> 新鲜事
+  	</span>
+</div>
+       </br>

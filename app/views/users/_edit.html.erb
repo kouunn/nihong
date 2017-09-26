@@ -1,0 +1,43 @@
+<%= render 'shared/error_messages', :object=>@user%>
+</br>  		
+
+<%= image_tag current_user.photo.url %>   
+  <div class="field">
+
+    <%= f.file_field :photo,:type=> "file" %>   
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password , :placeholder=>'密码'%>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, :placeholder=>'确认密码' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :name , :placeholder=>'名号'%>    	
+  </div>
+  
+  <div class="field">
+    <%= f.text_field :true_name, :placeholder=>'真实姓名' %>    	
+  </div>
+  <div class="field">
+    <%= f.text_field :sex, :placeholder=>'性别' %>    	
+  </div>
+  <div class="field">
+    <%= f.text_field :birthday, :placeholder=>'生日' %>    	
+  </div>
+   <div class="field">
+    <%= f.text_field :love_status, :placeholder=>'情感状况' %>    	
+  </div>
+  <div class="field">
+    <%= f.text_field :university, :placeholder=>'所在大学' %>    	
+  </div>      
+  <div class="field">
+    <%= f.text_field :school_year, :placeholder=>'入学年份' %>    	
+  </div>  
+
+    <div class="field">
+    <%= f.text_field :location, :placeholder=>'常居地' %>    	
+  </div>
+

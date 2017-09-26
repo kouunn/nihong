@@ -1,0 +1,57 @@
+   <table class="front" summary="For signed-in users">
+   	<tr>  <td class="main">
+<h1>朋友</h1>
+
+<% @users.each do |user| %>
+<div class="customers">
+
+<ul>
+
+
+  <%= image_tag user.photo.url %>
+	<div class="frind">
+    <%= link_to user.name,user %>
+	<li><a class="name">性别 :</a><%= user.sex %> </li>
+  	<li><a class="name">情感状况 :</a><%= user.love_status %></li>
+  	<li><a class="name">大学 :</a><%= user.university %></li>
+  	<li><a class="name">常居地 :</a><%= user.location %></li>
+   </div>
+		
+</ul>
+
+</div>
+
+<% end %>
+
+
+<div class="apple_pagination">
+  <%= will_paginate %>
+</div>
+</td>
+</tr>
+</table>
+ <!--   
+ 	
+
+ 	  <tr>
+    <th>名号</th>
+    <th>性别</th>
+    <th>生日</th>
+    <th>情感状况</th>
+    <th>所在大学</th>
+    <th>入学年份</th>
+    <th>常居地 </th>
+  </tr>
+ 	
+ 	<td><%# link_to '前往主页', user %></td>
+    <td><%# link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+    
+        <ul class="users">
+    <%# render @users  %>
+
+</ul>
+    
+-->
+    
+    
+  

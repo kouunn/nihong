@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nihong</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%# stylesheet_link_tag    'stylesheets/blueprint/screen', :media => 'screen' %>
+  <%# stylesheet_link_tag    'stylesheets/blueprint/print', :media => 'print' %>
+  
+  <%= stylesheet_link_tag    'stylesheets/custom', :media => 'screen' %>
+  <%= stylesheet_link_tag    'stylesheets/navigation' %>
+  <%= stylesheet_link_tag    'stylesheets/icon' ,:media=> 'all'%>
+  <%= stylesheet_link_tag    'stylesheets/login' ,:media=> 'all'%>
+      
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "js/jQueryGotoTop" %>
+  <%= javascript_include_tag "js/placeholder" %>
+  <%= javascript_include_tag "js/tab" %>
+  <!--导航--> 
+  <%= javascript_include_tag "js/easing" %>
+  <%= javascript_include_tag "js/init" %>
+
+
+</head>
+<body>
+
+
+<% flash.each do |key,value,|%>
+   <div class="flash<%= key %>">
+     <%= value%>
+   </div>
+<% end %>
+   <div class="container">
+     <%= render 'layouts/header' %>
+     <section class="round">
+         <%= yield %>
+     </section>  
+     <%= render 'layouts/footer' %>
+
+   </div>
+</body>
+ <!--<%= debug(params) if Rails.env.development?  %> -->
+</html>

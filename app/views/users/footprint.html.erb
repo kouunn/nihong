@@ -1,0 +1,40 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+     <h1><%= @user.name%>足迹</h1>
+	      <div class="profile_nav">
+
+    	  <%= link_to '新鲜事',user_path %> 
+    	  <%= link_to '报告',report_user_path(@user)%> 
+          <%= link_to '课程',course_user_path(@user)%> 
+          <%= link_to '足迹',footprint_user_path(@user)%> 
+          <%= link_to '美食',food_user_path(@user)%> 
+ 	  </div>
+   </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>   
+      <%= render 'follow_form' if signed_in? %>
+    
+
+    </td>
+    <td class="sidebar round">
+      <strong>名号</strong> <%= @user.name %><br />
+      <strong>URL</strong> <%= link_to user_path(@user), user_path(@user) %><br />
+      <strong>日记</strong> <%= @user.microposts.count %>
+     <%=render 'shared/stats' %>
+     <%=render 'shared/user_profile' %>
+    </td>  
+  </tr>  
+</table>
